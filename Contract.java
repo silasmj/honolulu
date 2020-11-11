@@ -1,4 +1,4 @@
-public class Contract {
+public class Contract extends rental {
     int id;
     String fromDateAndTime;
     String toDateAndTime;
@@ -6,7 +6,8 @@ public class Contract {
     int kmAtStart;
     int registrationNumber;
 
-    public Contract(int id, String fromDateAndTime, String toDateAndTime, int maxKM, int kmAtStart, int registrationNumber) {
+    public Contract(int id, String fromDateAndTime, String toDateAndTime, int maxKM, int kmAtStart, int registrationNumber, String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email) {
+        super(firstName, lastName, address, postNumber, city, mobileNumber, email);
         this.id = id;
         this.fromDateAndTime = fromDateAndTime;
         this.toDateAndTime = toDateAndTime;
