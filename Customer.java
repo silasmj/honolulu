@@ -6,8 +6,9 @@ public class Customer {
     String city;
     int mobileNumber;
     String email;
+    int id;
 
-    public Customer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email) {
+    public Customer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -15,6 +16,7 @@ public class Customer {
         this.city = city;
         this.mobileNumber = mobileNumber;
         this.email = email;
+        this.id = id;
     }
 
     public String toString() {
@@ -84,4 +86,11 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
+    public int getId() {
+         return id;
+    }
+    public void setId(int id)  {
+         this.id = id;
+    }
+
 }

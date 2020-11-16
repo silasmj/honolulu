@@ -4,8 +4,8 @@ public class CompanyCustomer extends Customer {
     int phoneNumber;
     int CRN;
 
-    public CompanyCustomer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email, String companyName, String companyAddress, int phoneNumber, int CRN) {
-        super(firstName, lastName, address, postNumber, city, mobileNumber, email);
+    public CompanyCustomer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email, int id, String companyName, String companyAddress, int phoneNumber, int CRN) {
+        super(firstName, lastName, address, postNumber, city, mobileNumber, email, id);
         this.companyName = companyName;
         this.companyAddress = companyAddress;
         this.phoneNumber = phoneNumber;
@@ -14,10 +14,18 @@ public class CompanyCustomer extends Customer {
 
     public String toString() {
         return "CompanyCustomer{" +
-                "companyName='" + companyName + '\'' +
-                ", companyAddress='" + companyAddress + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", CRN=" + CRN +
+                "firstname: " + getFirstName() +
+                ", lastname: " + getLastName() +
+                ", address: " + getAddress() +
+                ", postnumber: " + getPostNumber() +
+                ", city: " + getCity() +
+                ", mobileNumber: " + getMobileNumber() +
+                ", email: " + getEmail() +
+                ", id: " + getId() +
+                ", companyName: " + companyName + '\'' +
+                ", companyAddress: " + companyAddress + '\'' +
+                ", phoneNumber: " + phoneNumber +
+                ", CRN: " + CRN +
                 '}';
     }
 
