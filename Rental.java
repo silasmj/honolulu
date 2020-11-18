@@ -3,22 +3,25 @@ public class Rental {
     String model;
     String type;
     int id;
-    String fromDateAndTime;
-    String toDateAndTime;
+    String fromDate;
+    String toDate;
     int maxKM;
     int kmAtStart;
     String registrationNumber;
 
-    public Rental(String make, String model, String type, int id, String fromDateAndTime, String toDateAndTime, int maxKM, int kmAtStart, String registrationNumber) {
+    public Rental(String make, String model, String type, int id, String fromDate, String toDate, int maxKM, int kmAtStart, String registrationNumber) {
         this.make = make;
         this.model = model;
         this.type = type;
         this.id = id;
-        this.fromDateAndTime = fromDateAndTime;
-        this.toDateAndTime = toDateAndTime;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
         this.maxKM = maxKM;
         this.kmAtStart = kmAtStart;
         this.registrationNumber = registrationNumber;
+    }
+
+    public Rental() {
     }
 
     public String toString() {
@@ -27,8 +30,8 @@ public class Rental {
                 ", model='" + model + '\'' +
                 ", type='" + type + '\'' +
                 ", id=" + id +
-                ", fromDateAndTime='" + fromDateAndTime + '\'' +
-                ", toDateAndTime='" + toDateAndTime + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
                 ", maxKM=" + maxKM +
                 ", kmAtStart=" + kmAtStart +
                 ", registrationNumber='" + registrationNumber + '\'' +
@@ -67,20 +70,20 @@ public class Rental {
         this.id = id;
     }
 
-    public String getFromDateAndTime() {
-        return fromDateAndTime;
+    public String getFromDate() {
+        return fromDate;
     }
 
-    public void setFromDateAndTime(String fromDateAndTime) {
-        this.fromDateAndTime = fromDateAndTime;
+    public void setFromDate(String fromDate) {
+        this.fromDate = fromDate;
     }
 
-    public String getToDateAndTime() {
-        return toDateAndTime;
+    public String getToDate() {
+        return toDate;
     }
 
-    public void setToDateAndTime(String toDateAndTime) {
-        this.toDateAndTime = toDateAndTime;
+    public void setToDate(String toDate) {
+        this.toDate = toDate;
     }
 
     public int getMaxKM() {

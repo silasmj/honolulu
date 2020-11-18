@@ -1,17 +1,19 @@
 public class Customer {
     String firstName;
     String lastName;
-    String address;
+    String streetName;
+    int houseNumber;
     int postNumber;
     String city;
     int mobileNumber;
     String email;
     int id;
 
-    public Customer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email, int id) {
+    public Customer(String firstName, String lastName, String streetName, int houseNumber, int postNumber, String city, int mobileNumber, String email, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = address;
+        this.streetName = streetName;
+        this.houseNumber = houseNumber;
         this.postNumber = postNumber;
         this.city = city;
         this.mobileNumber = mobileNumber;
@@ -19,11 +21,15 @@ public class Customer {
         this.id = id;
     }
 
+    public Customer() {
+    }
+
     public String toString() {
         return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", housenumber='" + houseNumber +
                 ", postNumber=" + postNumber +
                 ", city='" + city + '\'' +
                 ", mobileNumber=" + mobileNumber +
@@ -47,12 +53,19 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreetName() {
+        return streetName;
+    }
+    public int getHouseNumber() {
+        return houseNumber;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setHouseNumber(int houseNumber)    {
+        this.houseNumber = houseNumber;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
     public int getPostNumber() {

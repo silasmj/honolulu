@@ -2,17 +2,22 @@ public class PrivateCustomer extends Customer {
     int licenseNumber;
     String driverSinceDate;
 
-    public PrivateCustomer(String firstName, String lastName, String address, int postNumber, String city, int mobileNumber, String email, int id, int licenseNumber, String driverSinceDate) {
-        super(firstName, lastName, address, postNumber, city, mobileNumber, email, id);
+    public PrivateCustomer(String firstName, String lastName, String streetName, int houseNumber, int postNumber, String city, int mobileNumber, String email, int id, int licenseNumber, String driverSinceDate) {
+        super(firstName, lastName, streetName, houseNumber, postNumber, city, mobileNumber, email, id);
         this.licenseNumber = licenseNumber;
         this.driverSinceDate = driverSinceDate;
+    }
+
+    public PrivateCustomer() {
+        super();
     }
 
     public String toString() {
         return "PrivateCustomer{" +
                 "firstname: " + getFirstName() +
                 ", lastname: " + getLastName() +
-                ", address: " + getAddress() +
+                ", Street name:  " + getStreetName() +
+                ", house Number: " + getHouseNumber() +
                 ", post number: " + getPostNumber() +
                 ", city: " + getCity() +
                 ", mobile number: " + getMobileNumber() +
